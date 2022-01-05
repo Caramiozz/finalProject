@@ -425,7 +425,7 @@
             $name = $_POST['searchInput'];
             
                 
-            $conn = mysqli_connect("localhost","admin","1234","maintable");
+            $conn = mysqli_connect("us-cdbr-east-05.cleardb.net","bd317668d6ac89","648019f5","heroku_5fe39184ffe2eef");
             //$sql="SELECT * FROM Methods WHERE Name = '".$name."'  ";
             
             $sql="SELECT * FROM Methods WHERE Name = '$name' ";
