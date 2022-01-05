@@ -49,7 +49,7 @@
                     <option value="C#" <?php echo (isset($_POST['languageTranslateFromPost']) && $_POST['languageTranslateFromPost'] == 'C#') ? 'selected' : ''; ?>>C#</option>
                 </select>
             
-            <img src="images/arrow_right_icon_128385.png" id="translationArrowRight"></img> 
+            <img src="https://i.ibb.co/7XK4QKk/arrow-right-icon-128385.png" id="translationArrowRight"></img> 
             
             <select id="languageTranslateTo" name="languageTranslateToPost">
                     <option value="Java" <?php echo (isset($_POST['languageTranslateToPost']) && $_POST['languageTranslateToPost'] == 'Java') ? 'selected' : ''; ?>>Java</option>
