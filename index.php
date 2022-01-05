@@ -279,7 +279,7 @@
     </div>
        
         <div id="searchDivTopArrowDiv">
-            <img id="arrowIcon" src="images/double-horizontal-arrow.png">
+            <img id="arrowIcon" src="https://i.ibb.co/X28Lf8s/double-horizontal-arrow.png">
         </div>
         
     <div id="searchDivTopDropdownDiv">
