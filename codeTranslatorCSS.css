@@ -1,0 +1,430 @@
+
+html,body
+{
+
+    font-family: "Calibre", Helvetica, Arial, sans-serif;
+       
+    background-color: #36393F;
+    
+    height:100%;
+    width:100%;
+    
+     display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+#translatorMainDiv
+{
+    
+   height:100%;
+   width:100%;
+   background-color: #36393F;
+    
+   display:flex;
+   flex-direction:column;
+    
+   align-items:center;
+   justify-content:space-around;
+    
+    
+}
+#translatorHeader
+{
+    
+   background-color:#36393F;
+    
+   height:25%;
+   width:60%;
+   
+   
+   display:flex;
+    
+   align-items:flex-start;
+   justify-content:center;
+   
+}
+#mainScreenTab
+{
+    
+    width:200px;
+    
+    background-color: orange;
+    color: black;
+    font-family: "Calibre", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border: 3px solid #d6d1d5;
+    padding: 10px;
+    transition: 0.5s;
+    
+}
+#submitTemplateTab
+{
+    width:200px;
+    
+    background-color: orange;
+    color: black;
+    font-family: "Calibre", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border: 3px solid #d6d1d5;
+    padding: 10px;
+    transition: 0.5s;
+    
+}
+
+
+#userInputDiv
+{
+  
+   border:3px solid;
+   border-color:#40d9ac;
+   border-radius: 5px;
+    
+
+   background-color:lightgrey;
+    
+   height:15%;
+   width:60%;
+    
+   display:flex;
+   
+
+    
+
+    
+    
+}
+#userInputFormInputDiv
+{
+    
+    
+    display:flex;
+    
+    flex-direction:row;
+    
+     
+    justify-content:space-between;
+    align-items:center;
+    
+}
+#languageTranslateFrom
+{
+    font-size:25px;
+    
+            background-color:#eeecee;
+             display: block;
+                     
+             
+             padding: 14px 40px;   
+             outline: none;  
+             color: black; 
+             
+             border: 5px solid #9d9099;
+             border-radius: 3px;
+             
+             height:25%;
+
+             
+             
+             text-align: center;
+}
+#languageTranslateTo
+{
+    font-size:25px;
+    
+            background-color:#eeecee;
+             display: block;
+             width: 25%;            
+            
+             padding: 14px 40px;   
+             outline: none;  
+             color: black;  
+           
+             border: 5px solid #9d9099;
+             border-radius: 3px;
+             
+             text-align: center;
+}
+
+#translateDiagramDiv
+{
+    
+   display:flex;
+   flex-direction:row;
+   
+   height:80%;
+   width:90%;
+   
+   align-items:center;
+   justify-content:space-between; 
+  
+ 
+}
+
+#translatorLeft
+{
+    
+    border:5px solid;
+    border-color:#40d9ac;
+    border-radius: 5px;
+    
+
+    background-color:lightgrey;
+    
+    height:80%;
+    width:45%;
+    
+    display:flex;
+    
+    justify-content:center;
+    align-items:center;
+    
+    
+}
+#translatorRight
+{
+    
+    border:5px solid;
+    border-color:#40d9ac;
+    border-radius: 5px;
+   
+    
+    background-color:lightgrey;
+    
+    height:80%;
+    width:45%;
+    
+    display:flex;
+    
+    align-items:center; 
+    justify-content:center;
+    
+}
+#translatorRightContextDiv
+{
+    border:3px solid;
+    border-color:darkgray;
+    border-radius: 5px;
+    
+    background-color:white;
+    
+    
+    display:flex;
+    
+    align-items:center; 
+    justify-content:center;
+    
+    height:95%;
+    width:95%;
+    
+}
+
+#resultText
+{
+    
+   max-width:500px;
+   
+   font-size:40px;
+   font-weight:bold;
+    
+    
+    
+}
+
+#functionInputDiv
+{
+    
+    border:3px solid;
+    border-color:darkgray;
+    border-radius: 5px;
+    
+    background-color:white;
+    
+    
+    display:flex;
+    
+    align-items:center; 
+    justify-content:center;
+    
+    height:95%;
+    width:95%;
+       
+}
+
+
+
+
+#variableEntryInput
+{
+    margin-top:15px;
+    margin-left:10px;
+    
+    width:20px;
+    
+}
+
+/* User variable input inside related*/
+#userInputForm
+{
+    
+    
+    height:100%;
+    width:100%;
+    
+   
+    
+    
+   
+    
+}
+#translateButtonInFormDiv
+{
+    margin-top :10px;
+    margin-bottom: 10px;
+    
+    display:flex;
+    
+    
+    
+    justify-content:center;
+    align-items:center;
+    
+}
+#translateButtonOutsideDiv
+{
+    margin-top:20px;
+    
+    display:flex;
+    
+    width:80%;
+    height:10%;
+    
+    
+    
+    
+    justify-content:center;
+    align-items:center;
+   
+}
+#translateToLanguageButton
+{
+    
+    width:50%;
+    
+    background-color: #2ecc71;
+    color: white;
+    font-family: "Calibre", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 3px solid #1e8549;
+    padding: 10px 10px;
+    transition: 0.5s;
+    
+    
+}
+#translateToLanguageButton:hover
+{  
+    background-color: #1e8549;   
+    
+    cursor: pointer; 
+}
+#userInputFormInputDiv
+{
+    
+    display:flex;
+    
+    justify-content:center;
+    align-items:center;
+    
+}
+#methodName
+{
+    
+    font-size:25px;
+             
+    overflow:hidden;
+            
+          
+    background-color:#eeecee;
+    display: block;
+    height:25%;
+    width: 25%;   
+    text-align: center; 
+    border: 5px solid #9d9099;
+    border-radius: 3px;
+    padding: 14px 40px;   
+    outline: none;  
+    color: black;  
+  
+    
+    
+}
+#translationArrowRight
+{
+    
+    width:50px;
+    height:50px;
+    
+}
+#translateButton
+{
+    
+    
+    width:50%; 
+    
+    height:100%;
+    background-color: #2ecc71;
+    color: white;
+    font-family: "Calibre", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 3px solid #1e8549;
+    padding: 10px 10px;
+    transition: 0.5s;
+}
+#translateButton:hover
+{  
+    background-color: #1e8549;   
+    color: #40d9ac;
+    cursor: pointer; 
+}
+
+#copyToClipboardButton
+{
+    
+    max-width:70px;
+    max-height:70px;
+    
+    position:absolute;
+    
+    bottom:8%;
+    right:24%;
+    
+}
+#copyToClipboardButton:hover
+{  
+    
+    max-width:100px;
+    max-height:100px;
+    
+    cursor: pointer; 
+}
+#copyToClipboardButton:focus
+{  
+    
+    max-width:120px;
+    max-height:120px;
+    
+    background-color:grey;
+    
+    border-radius: 5px;
+    border: 3px solid #1e8549;
+    
+    cursor: pointer; 
+}
