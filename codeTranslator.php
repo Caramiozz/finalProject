@@ -188,7 +188,7 @@
                 
                 
             </div>
-                <input type="image" src="images/copy-to-clipboard-icon-1.jpg" onclick="copyToClipboard()" id="copyToClipboardButton"></input>
+                <input type="image" src="https://i.ibb.co/X2G1Y0M/copy-to-clipboard-icon-1.png" onclick="copyToClipboard()" id="copyToClipboardButton"></input>
                 
             
             <div id="translatorRight">
