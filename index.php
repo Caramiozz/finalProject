@@ -100,7 +100,7 @@
       
       <div id="headerLeft">
           
-         <img src="images/Resim2.png" id='pageTitle'/>
+         <img src="public/images/Resim2.png" id='pageTitle'/>
 
       </div>
       
