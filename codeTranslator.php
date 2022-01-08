@@ -13,7 +13,7 @@
         
     </head>
     
-    
+    <div id="wrapper">
     
     <body>
         
@@ -23,7 +23,7 @@
             <div id ="translatorHeader">
                 
                 <button id="mainScreenTab" onclick="window.location='index.php'">Home</button>
-                <button id="submitTemplateTab"onclick="window.location='submitTemplate.php'">Submit Template</button>  
+                <button id="submitTemplateTab"onclick="window.location='submitTemplate.php'">Contribute to the site</button>  
                 
             </div>
             
@@ -49,7 +49,7 @@
                     <option value="C#" <?php echo (isset($_POST['languageTranslateFromPost']) && $_POST['languageTranslateFromPost'] == 'C#') ? 'selected' : ''; ?>>C#</option>
                 </select>
             
-            <img src="https://i.ibb.co/7XK4QKk/arrow-right-icon-128385.png" id="translationArrowRight"></img> 
+            <img src="images/arrow_right_icon_128385.png" id="translationArrowRight"></img> 
             
             <select id="languageTranslateTo" name="languageTranslateToPost">
                     <option value="Java" <?php echo (isset($_POST['languageTranslateToPost']) && $_POST['languageTranslateToPost'] == 'Java') ? 'selected' : ''; ?>>Java</option>
@@ -88,7 +88,7 @@
                       
                         
            
-                    $conn = mysqli_connect("us-cdbr-east-05.cleardb.net","bd317668d6ac89","648019f5","heroku_5fe39184ffe2eef");
+                    $conn = mysqli_connect("localhost","admin","1234","group5");
                     //$sql="SELECT * FROM Methods WHERE Name = '".$name."'  ";
                             
                     $sql="SELECT * FROM translatemethods WHERE methodname = '$methodName' ";          
@@ -138,9 +138,11 @@
                 
                 
                 ?>
-                    
-               
+
+          
+                   
                 
+               
                  
                 
                 
@@ -188,13 +190,13 @@
                 
                 
             </div>
-                <input type="image" src="https://i.ibb.co/X2G1Y0M/copy-to-clipboard-icon-1.png" onclick="copyToClipboard()" id="copyToClipboardButton"></input>
+                <input type="image" src="images/copy-to-clipboard-icon-1.jpg" onclick="copyToClipboard()" id="copyToClipboardButton"></input>
                 
             
             <div id="translatorRight">
                 
                 <div id = "translatorRightContextDiv">
-                <p id="resultText"></p>
+                <pre id="resultText"></pre>
                 </div>
                 
             </div>
@@ -213,4 +215,6 @@
         
         
     </body> 
+    
+    </div>
 </html>
