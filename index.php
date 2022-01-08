@@ -128,7 +128,7 @@
       
       <div id="headerLeft">
           
-         <img src="images/Resim2.png" id='pageTitle'/>
+         <img src="https://i.ibb.co/3T2RT0Y/Resim2.png" id='pageTitle'/>
 
       </div>
       
@@ -307,7 +307,7 @@
     </div>
        
         <div id="searchDivTopArrowDiv">
-            <img id="arrowIcon" src="images/double-horizontal-arrow.png">
+            <img id="arrowIcon" src="https://i.ibb.co/X28Lf8s/double-horizontal-arrow.png">
         </div>
         
     <div id="searchDivTopDropdownDiv">
