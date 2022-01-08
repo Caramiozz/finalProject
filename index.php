@@ -24,7 +24,8 @@
        
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        
         <title>Document</title>
 
         <!-- include the CSS file -->
@@ -42,8 +43,11 @@
         
          
     </head>
-  
-<div id="wrapper">
+
+    <div id="wrapper">
+        
+        
+        
     
 <body>
 <!--div for the search bar functionality -->
@@ -66,24 +70,46 @@
         </div>
         
         <div id="loggedAccountFavourites">
-            <p>Favourites</p>
+            <div id="favouritesTitle">
+                <p>Favourites</p>              
+            </div>
+            
+            <div id="favouriteOne">
+                <button id="favonebutton">Favourite One</button>
+            </div>
+            
+            <div id="favouriteTwo">
+                <button id="favtwobutton">Favourite Two</button>
+            </div>
+            
+            <div id="favouriteThree">
+                <button id="favthreebutton">Favourite Three</button>
+            </div>
+         
+            
         </div>
         
     </div>
     
     <!-- absolute position div for tabs information -->
-    <div id="siteTabsDiv">
-        
-         <button id="translateCodeTab" onclick="window.location='codeTranslator.php'">Translate Code</button>
-         <button id="submitTemplateTab"onclick="window.location='submitTemplate.php'">Submit Template</button>    
-         
-    </div>
+    
     
     
 
     <div id="mainDiv">
         
+         <div id="siteTabsDiv">
+        
+                <button id="translateCodeTab" onclick="window.location='codeTranslator.php'">Translate Code</button>
+                 <button id="submitTemplateTab"onclick="window.location='submitTemplate.php'">Contribute to the site</button>    
+         
+             </div>
+       
+        
         <div id="headerDiv">
+            
+            
+            
 
        <!-- Dropdown after clicking the login button -->
         <div id="loginDropdown" style="display: none">
@@ -102,7 +128,7 @@
       
       <div id="headerLeft">
           
-         <img src="https://i.ibb.co/3T2RT0Y/Resim2.png" id='pageTitle'/>
+         <img src="images/Resim2.png" id='pageTitle'/>
 
       </div>
       
@@ -135,7 +161,7 @@
                 
                 
            
-                $conn = mysqli_connect("localhost","admin","1234","maintable");
+                $conn = mysqli_connect("localhost","admin","1234","group5");
                 
                 $sqlLogin="SELECT * FROM Users WHERE Username = '$attemptName' ";      
                 $resultLogin = mysqli_query($conn , $sqlLogin);          
@@ -281,7 +307,7 @@
     </div>
        
         <div id="searchDivTopArrowDiv">
-            <img id="arrowIcon" src="https://i.ibb.co/X28Lf8s/double-horizontal-arrow.png">
+            <img id="arrowIcon" src="images/double-horizontal-arrow.png">
         </div>
         
     <div id="searchDivTopDropdownDiv">
@@ -310,7 +336,11 @@
  </div>
 
 
-
+        <div id="favouriteDiv">
+            
+            <button id = "favouriteButton" name="favouriteButtonPost">Favourite this method!</button>
+            
+        </div>
 
 
 
@@ -427,7 +457,7 @@
             $name = $_POST['searchInput'];
             
                 
-            $conn = mysqli_connect("us-cdbr-east-05.cleardb.net","bd317668d6ac89","648019f5","heroku_5fe39184ffe2eef");
+            $conn = mysqli_connect("localhost","admin","1234","group5");
             //$sql="SELECT * FROM Methods WHERE Name = '".$name."'  ";
             
             $sql="SELECT * FROM Methods WHERE Name = '$name' ";
@@ -513,6 +543,7 @@
 
 
 </body>
+
+</div>
     
-    </div>
 </html>
