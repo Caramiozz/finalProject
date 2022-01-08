@@ -6,13 +6,16 @@ html,body
        
     background-color: #36393F;
     
-    height:100%;
-    width:100%;
-    
-     display:flex;
-    justify-content:center;
-    align-items:center;
+   
 
+}
+
+/* testing resize */ 
+#wrapper {
+    margin-left:auto;
+    margin-right:auto;
+    width:1800px;
+    height:900px;
 }
 
 
@@ -167,6 +170,7 @@ html,body
 
 #translatorLeft
 {
+    max-height:420px;
     
     border:5px solid;
     border-color:#40d9ac;
@@ -187,6 +191,7 @@ html,body
 }
 #translatorRight
 {
+    max-height:420px;
     
     border:5px solid;
     border-color:#40d9ac;
@@ -226,15 +231,30 @@ html,body
 #resultText
 {
     
-   max-width:500px;
    
-   font-size:40px;
+   
+   font-size:25px;
    font-weight:bold;
+   
+   display:block;
+   
+   height:95%;
+   width:95%;
+   
+   justify-content:center;
+   align-items:center;
+   
+   
+   
+  
+   
+   overflow-y:scroll;
+   
     
     
     
 }
-
+/*For for-loop*/
 #functionInputDiv
 {
     
@@ -244,15 +264,94 @@ html,body
     
     background-color:white;
     
+ 
+    display:flex;
+       
+    align-items:center;
+    justify-content:center;
+    
+    
+    height:95%;
+    width:95%;
+       
+}
+/*For switch statement*/
+#functionInputDivSwitch
+{
+    
+    border:3px solid;
+    border-color:darkgray;
+    border-radius: 5px;
+    
+    background-color:white;
+    
+ 
+    display:block;
+    flex-direction:column;
+       
+    align-items:center;
+    justify-content:center;
+    
+    overflow-y:scroll;
+    
+    height:95%;
+    width:95%;
+       
+}
+
+
+
+/* CSS FOR SPECIFIC FUNCTIONS IF NEEDED */
+#switchCasesDiv
+{
+  
+    margin-top:100px;
+    display:flex;
+    
+    align-items:center; 
+    justify-content:center;
+    
+    height:400px;
+    
+    
+    flex-direction:column; 
+}
+#switchCasePre
+{
+    
+    font-family: "Calibre", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    
+}
+#userEntryDivSwitch
+{
+    margin-top:50px;
     
     display:flex;
     
     align-items:center; 
     justify-content:center;
     
-    height:95%;
-    width:95%;
-       
+    flex-direction:row; 
+    
+    
+}
+
+#userEntryDivPrint
+{
+    
+    font-size:22px;
+    
+    margin-top:50px;
+    
+    display:flex;
+    
+    align-items:center; 
+    justify-content:center;
+    
+    flex-direction:row; 
+    
+    
 }
 
 
@@ -274,6 +373,7 @@ html,body
     
     height:100%;
     width:100%;
+    
     
    
     
@@ -333,6 +433,9 @@ html,body
     
     cursor: pointer; 
 }
+
+
+
 #userInputFormInputDiv
 {
     
@@ -403,8 +506,8 @@ html,body
     
     position:absolute;
     
-    bottom:8%;
-    right:24%;
+    bottom:10%;
+    right:25%;
     
 }
 #copyToClipboardButton:hover
