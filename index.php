@@ -42,6 +42,8 @@
         
          
     </head>
+  
+<div id="wrapper">
     
 <body>
 <!--div for the search bar functionality -->
@@ -511,4 +513,6 @@
 
 
 </body>
+    
+    </div>
 </htm
