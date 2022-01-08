@@ -17,7 +17,7 @@
     </head>
     
     
-    
+    <div id="wrapper">
     
     <body>
         
@@ -37,6 +37,11 @@
                 <button id="showTutorial" onclick="showSubmissionTutorialDiv()" > Show submission tutorial </button>
                 
                 <div id = "hoverTutorial" style="display: none">
+                    
+                    <div id="closeButton">
+                        <input type="image" src="https://i.ibb.co/1GYKz6x/x-mark-256.png" onclick="closeTutorial()" id="closeTutorialButton"></input>
+                                         
+                    </div>
                     
                     <div id = "tutorialHeaderDiv">
                         <p id = "tutorialHeaderP"> Submission Information </p>
@@ -162,7 +167,7 @@
         
     </body>
     
-    
+    </div>
  
     
     
