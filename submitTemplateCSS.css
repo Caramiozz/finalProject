@@ -364,6 +364,8 @@ html,body
 #submissionRight
 {
    
+   
+    
    height: 100%;
    width: 50%;
    display: flex;
@@ -388,7 +390,7 @@ html,body
 }
 #submissionPhoto
 {
-    
+    width:100%;
     
     overflow: hidden;
     
@@ -399,7 +401,7 @@ html,body
 }
 #submitPhotoButtonDiv
 {
-    border-bottom: 5px solid black;
+    
     
     
     height:20%;
@@ -459,6 +461,8 @@ html,body
 
 #photoDiv
 {
+    border-top: 5px solid black; 
+    
     display:flex;
     
     justify-content:center;
