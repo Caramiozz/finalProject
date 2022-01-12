@@ -9,20 +9,20 @@
     
     <head>
         
-         <!-- include the CSS file -->
+         <!-- include the CSS file and javascript file -->
         <link rel="stylesheet" href="submitTemplateCSS.css">
         <script type="text/javascript" src="javascriptfile.js"></script>
         
         
     </head>
     
-    
+    <!-- wrapper that contains the whole page -->
     <div id="wrapper">
     
     <body>
-        
+         
         <div id="mainDiv">
-            
+            <!-- header tab div that contains tabs to other parts of the page -->
             <div id="headerTabDiv">
                 
                 <button id="mainScreenTab" onclick="window.location='index.php'">Home</button>
@@ -30,9 +30,12 @@
                 
             </div>
             
+            
+            <!-- header div that contains the upper side of the page-->
             <div id="headerDiv">
                                          
-                
+                <!-- the showTutorial button, which will show the submission tutorial div on click-->
+                <!-- The tutorial div will show the user how to properly submit the entries -->
                 
                 <button id="showTutorial" onclick="showSubmissionTutorialDiv()" > Show submission tutorial </button>
                 
@@ -79,12 +82,12 @@
                 
             </div>
             
-            
+            <!-- the href will create a e-mail submission with mailto: to a predefined gmail account for the developers to check -->
             <div id="emailContentDiv">
                 
                 <div id ="mailLinkDiv">
                 
-                <a id ="emailContent" href="mailto:codeswaptemplatesubmission@gmail.com?
+                <a id ="emailContent" href="mailto:codeswapsubmission@gmail.com?
                  cc=&
                  bcc=
                  &subject= WARNING: Please press the 'Submite Template' button before preceeding!
@@ -95,7 +98,9 @@
                  </a>
                     
                 </div>
-                
+                <!-- by clicking the submit template button, we will create a template submission -->
+                <!-- by doing this, the user will be ready to send an e-mail -->
+                <!-- the values will be taken through javascript from user entered values once the submit template button is clicked-->
                 <div id="submitButtonDiv">
                     <button id="submitTemplateButton" onclick="submitTemplate()"> Submit Template </button>
                 </div>
@@ -105,6 +110,9 @@
                    
             </div>
             
+            
+            
+            <!-- The submission template for the user to enter values-->
             <div id="submissionBackground">
             
                 <div id="submissionTemplate">
@@ -113,19 +121,24 @@
                         
                         
                             <div id="submissionLeftText">
-
+                                
+                                <!-- The div for the title entry from the user(for-loop,while) etc -->
                                 <div id="submissionTitle">
-
+                                        
                                     <textarea type="text" placeholder="Title" id="titleInput" name="titlePost"></textarea>
 
 
                                 </div>
+                                
+                                <!-- The div for the description entry -->
                                 <div id="submissionText">
 
                                     <textarea  type="text" placeholder="Description" id="descriptionInput" name="descriptionPost"></textarea>
 
 
                                 </div>
+                                
+                                <!-- The div that contains the href to the documentation of the given method --> 
                                 <div id="submissionLinks">
 
                                     <textarea type="text" placeholder="Documentation links" id="referenceInput" name="documentationPost"></textarea>
@@ -136,17 +149,23 @@
                         
                     </div>
                     
+                    
+                    <!-- The right side of the submissiondiv will contain a place for the user to preview an image -->
                     <div id="submissionRight">
                         <div id="submissionRightContent">
                             <div id="submissionPhoto">
                                 
                                 <div id="submitPhotoButtonDiv">
                                     
+                                    
+                                    <!-- Button that will allow the user to show the uploaded image in the given section -->
+                                    <!-- the handleImageUpload() javascript function will be used for this -->
                                     <input type="file" name="myImage" id="uploadedUserImage"  accept="image/*" />                                  
                                     <button id="submitPhotoButton" value="Upload" onclick="handleImageUpload()"> Preview Image </button>   
                                     
                                 </div>
                                 
+                                <!--The div that contains the image, by default it will be a placeholder picture -->
                                 <div id="photoDiv">
                                     <img id="uploadedPhoto" src ="images/placeholderSS.png" onerror="images/Resim2.png"></img>
                                 </div>
