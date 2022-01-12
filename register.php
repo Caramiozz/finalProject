@@ -10,9 +10,10 @@ session_start();
 
 
 <html>
-    
+     
     <head>
-        
+    <!-- include css and javascript files -->
+    <link rel="stylesheet" href="registerCSS.css">
     <script type="text/javascript" src="javascriptfile.js"></script>
     
    
@@ -28,23 +29,47 @@ session_start();
         
     </head>
   
- 
-  
+    <!-- Wrapper to cover the whole page -->
+    <div id="wrapper">
     <body>
         
-      
-      <button name="toggleView" onclick ="showPassword()">View Password</button>
+        <div id ="mainDiv">
         
-        <form method="post" onSubmit="return confirmSubmission();">
-            
-            <input  placeholder="Enter a username" name="username" type="text" value="<?php if (isset($_POST['username'])) echo $_POST['username']; ?>"/>
-            <input  placeholder="Enter an e-mail" name="e-mail" type="email" value="<?php if (isset($_POST['e-mail'])) echo $_POST['e-mail']; ?>"/>
-            <input  placeholder="Enter your password" name="password" type="password" id="registerPass"/>
-            <input  placeholder="Enter your password again" name="passwordRepeat" type="password" id="registerPassRepeat"/>
+        <!-- header div that contains tabs to other pages in the website-->
+        <div id="headerDiv">
             
             
+            <button id="translateCodeTab" onclick="window.location='codeTranslator.php'">Translate Code</button>
+            <button id="submitTemplateTab"onclick="window.location='submitTemplate.php'">Submit Template</button>
+            <button id="HomeTab"onclick="window.location='index.php'">Home</button>
             
-            <button name="searchSubmit" type="submit">Submit</button>
+     
+            
+        </div>
+        
+        
+        <div id = "contentDiv">
+        
+      <!-- View password button that allows the user to see the password they are entering -->      
+      <input type="image" id="viewPasswordButton" src="https://i.ibb.co/xXM11p3/eye-Symbol.jpg" onclick="showPassword()" id="toggleView"></input>
+      
+     
+        <!-- Form that contains the user input for account creation  -->
+        <form id="registirationForm" method="post" >
+            
+            <p id="descP"> Username </p>
+            <input id="usernameInput" placeholder="Enter a username" name="username" type="text" />
+            <p id="descP"> E-mail </p>
+            <input id="emailInput" placeholder="Enter an e-mail" name="e-mail" type="email"/>
+            <p id="descP"> Password </p>
+            <!-- autocomplete="new-password" will disable chrome from putting default values to the inputs-->
+            <input id="passwordInput" placeholder="Enter your password" name="password" type="password" id="registerPass" autocomplete="new-password"/>
+            <p id="descP"> Password confirmation </p>
+            <input id="passwordRepeatInput" placeholder="Enter your password again" name="passwordRepeat" type="password" id="registerPassRepeat"/>
+            
+            
+            <!-- submit button that will submit the form  -->
+            <button id="submitButton" name="searchSubmit" type="submit">Create Account</button>
             
             
         </form>
@@ -53,20 +78,25 @@ session_start();
         <script type="text/javascript" src="javascriptfile"></script>
 
         
-        
+        </div>
+            
+            
+        </div>
         
             
     </body>
     
+    </div>
     
     <?php
      
         
-      
-  
-        $conn = mysqli_connect("localhost","admin","1234","maintable");
         
         
+        //connect to sql
+        $conn = mysqli_connect("localhost","root","","group5");
+        
+        // if all the required fields are set
         if(isset($_POST['username']) && isset($_POST["password"]) && isset($_POST["passwordRepeat"]) && isset($_POST["e-mail"]))
         {
             //assign variables
@@ -75,9 +105,13 @@ session_start();
             $passwordrepeat = $_POST["passwordRepeat"];
             $email = $_POST["e-mail"];
            
-            
+            // if the length of the username is greater than 3 and the password is greater than 6
+            // and if the password match, we can continue
             if(strlen($username) > 3 && strlen($password) > 6 && ($password == $passwordrepeat)){
                 
+                
+                // here we will query the username and e-mail to check if it already exists in our users table
+                // if it exists, we will warn the user
                 $sql="SELECT * FROM users WHERE Username = '".$username."'  ";
                 $result = mysqli_query($conn , $sql);
                 
@@ -101,7 +135,8 @@ session_start();
                     echo 'Invalid email entry';
                     }
                 
-                //if conditions are met
+                //if conditions are met, we will insert the new user, along with a new userfavourites entry
+                // to our database.
                 if(!$emailcheck && !$unamecheck && filter_var($email, FILTER_VALIDATE_EMAIL) != false){
                     
                     
@@ -110,6 +145,11 @@ session_start();
                             . " VALUES ('".$username."','".$password."','".$email."','placeholder')";
                     
                     $sqlentry = mysqli_query($conn , $sqlEnterUser);
+                    
+                    $sqlEnterUserFavourites = "INSERT INTO `userfavourites`(`Username`, `FavouriteOne`, `FavouriteTwo`, `FavouriteThree`)"
+                            . " VALUES ('".$username."','placeholder','placeholder','placeholder')";
+                    
+                    $sqlsecondentry = mysqli_query($conn , $sqlEnterUserFavourites);
                     
                     
                     
@@ -128,32 +168,14 @@ session_start();
                 }
                  
            
-                //echo $username;
+           
                 }
                 
                 
             }
             
           
-            
-            
-        
-     
-        
-    
-        //$conn = mysqli_connect("localhost","admin","1234","maintable");
-            //$sql="SELECT * FROM Methods WHERE Name = '".$name."'  ";
-        
-        
-        
-            
-        //$sql="SELECT * FROM users WHERE Username = '$name' ";
-            
-            //$result = mysqli_query($conn , $sql);
-            
-            //$row = mysqli_fetch_row($result);
-    
-    
+
     ?>
     
     
