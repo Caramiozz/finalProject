@@ -305,15 +305,12 @@ html,body
 #switchCasesDiv
 {
   
-    margin-top:100px;
+    margin-top:30px;
     display:flex;
     
     align-items:center; 
-    justify-content:center;
-    
-    height:400px;
-    
-    
+    justify-content:flex-start;
+ 
     flex-direction:column; 
 }
 #switchCasePre
@@ -322,9 +319,17 @@ html,body
     font-family: "Calibre", Helvetica, Arial, sans-serif;
     font-size: 18px;
     
+    
+    display:flex;
+    justify-content: flex-start;
+
+    
+    
 }
 #userEntryDivSwitch
 {
+
+    
     margin-top:50px;
     
     display:flex;
@@ -403,12 +408,19 @@ html,body
     width:80%;
     height:10%;
     
-    
+    flex-direction:column;
     
     
     justify-content:center;
     align-items:center;
    
+}
+#compilerLinkText
+{
+    color:orange;
+    margin-top:5px;
+    font-weight:bold;
+    font-size:25px;
 }
 #translateToLanguageButton
 {
@@ -529,5 +541,182 @@ html,body
     border-radius: 5px;
     border: 3px solid #1e8549;
     
+    cursor: pointer; 
+}
+
+
+/*HOVER TUTORIAL RELATED*/
+
+
+
+#showTutorial
+{
+    
+    margin-top : 5px;
+    
+    font-size:20px;
+  
+                      
+    background-color:#40d9ac;        
+    width: 40%;                
+    border: 2px solid #40d9ac;
+    border-radius: 5px;
+                        
+    text-align:center;
+    color: black; 
+    
+}
+#showTutorial:hover
+{  
+    background-color: #1e8549;   
+    color: black;
+    cursor: pointer; 
+}
+
+#hoverTutorial
+{
+   
+    background-color:#36393F;
+    border: 8px solid darkgray;
+    border-radius: 5px;
+    
+    position:absolute;
+    
+    
+    text-align:center;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    
+    top:17%;
+    width:50%;
+    
+    height:83%;
+    width:50%;
+        
+    
+    display: none;
+    
+}
+/*hover tutorial inside related*/
+#tutorialDiv
+{
+    width:30%;
+    margin-bottom:20px;
+}
+#tutorialHeaderDiv
+{
+        
+    height:20%;
+    
+  
+    
+}
+#tutorialHeaderP
+{
+    color:white;
+    font-weight:bold;
+    font-size: 25px;
+    
+}
+#tutorialHeaderDescP
+{
+    color:white;
+    font-size:20px;    
+}
+#tutorialTitleDiv
+{
+    background-color:#d6d1d5;
+    border: 2px solid black;
+    border-radius: 5px;
+    
+    width:90%;
+    height:20%;
+}
+#tutorialDescriptionDiv
+{
+    background-color:#d6d1d5;
+    border: 2px solid black;
+    border-radius: 5px;
+    
+    width:90%;
+    height:20%;
+}
+#tutorialDocumentationDiv
+{
+    background-color:#d6d1d5;
+    border: 2px solid black;
+    border-radius: 5px;
+    
+    width:90%;
+    height:20%;
+}
+#tutorialImageSubmissionDiv
+{
+    background-color:#d6d1d5;
+    border: 2px solid black;
+    border-radius: 5px;
+    
+    width:90%;
+    height:20%;
+    
+    
+}
+#tutorialSubmissionDiv
+{
+    
+    background-color:#d6d1d5;
+    border: 2px solid black;
+    border-radius: 5px;
+    
+    width:90%;
+    height:20%;
+}
+#closeTutorialButton
+{
+    
+    border: 2px solid grey;
+    border-radius: 5px;
+    
+    margin-top:5px;
+    
+    max-width:30px;
+    max-height:30px;
+    
+    background-color:white;
+    color:white;
+    
+}
+#closeTutorialButton:hover
+{  
+    background-color: #1e8549;   
+    color: black;
+    cursor: pointer; 
+}
+
+
+#tutorialShowButton
+{
+    
+    
+    width:100%; 
+    
+    margin-bottom:5px;
+    
+    height:100%;
+    background-color: #2ecc71;
+    color: white;
+    font-family: "Calibre", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 3px solid #1e8549;
+    padding: 10px 10px;
+    transition: 0.5s;
+}
+#tutorialShowButton:hover
+{  
+    background-color: #1e8549;   
+    color: #40d9ac;
     cursor: pointer; 
 }
